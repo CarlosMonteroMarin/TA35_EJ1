@@ -1,0 +1,28 @@
+<div>
+  <h1>Listado de Cliente</h1>
+  <div *ngIf="lista == null">
+      <h2>No hay clientes</h2>
+  </div>
+  <table *ngIf="lista != null">
+      <thead><th>Nombre</th>
+          <th>CIF</th>
+          <th>Direccion</th>
+          <th>Grupo</th></thead>
+      <tbody>
+          <tr *ngFor="let client of lista">
+              <td>
+                  {{client.name}}
+              </td>
+              <td>
+                  {{client.cif}}
+              </td>
+              <td>
+                  {{client.address}}
+              </td>
+              <td>
+                  {{client.group}}
+              </td>
+          </tr>
+      </tbody>
+  </table>
+  </div>

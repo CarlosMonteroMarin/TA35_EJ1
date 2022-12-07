@@ -1,0 +1,37 @@
+
+<div>
+  <h1>Alta cliente</h1>
+  <form action="alta_cliente">
+    <table>
+      <tr>
+        <td><label for="nombre">Nombre: </label></td>
+        <td><input type="text" [(ngModel)]="nombreF"></td>
+      </tr>
+      <tr>
+        <td><label for="cif">CIF: </label></td>
+        <td><input type="text" [(ngModel)]="cifF"></td>
+      </tr>
+      <tr>
+        <td><label for="direccion: ">Dirección: </label></td>
+        <td><input type="text" [(ngModel)]="direccionF"></td>
+      </tr>
+      <tr>
+        <td><label for="grupo">Grupo: </label></td>
+        <td><select name="" [(ngModel)]="grupoF">
+          <option value="Sin definir">Sin definir</option>
+          <option value="A123">A123</option>
+          <option value="B456">B456</option>
+          <option value="C789">C789</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td><button (click)="anadirCliente()">Guardar</button>
+        </td>
+      </tr>
+    </table>
+
+
+    </form>
+  </div>
+  <app-lista [lista]="lista"></app-lista>
+  <router-outlet></router-outlet>
